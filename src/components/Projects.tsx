@@ -109,6 +109,14 @@ const Projects = () => {
         <p className="mb-6 text-center text-gray-500">
           A collection of projects that showcase my skills and experience
         </p>
+        <p className="mb-10 text-center text-gray-700 font-medium">
+          I’ve won 3 hackathons, including 1st place at a BVRIT hackathon for
+          the <span className="font-bold">Plastic Awareness Web App</span>,
+          <br /> 2nd place at another BVRIT hackathon for the{" "}
+          <span className="font-bold">Buddy Library Web App</span>,
+          <br /> and 1st place at a BVRIT design hackathon for{" "}
+          <span className="font-bold">Figma Design</span>.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
