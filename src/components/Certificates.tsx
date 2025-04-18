@@ -1,6 +1,5 @@
-
-import { useState } from 'react';
-import { Award, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { useState } from "react";
+import { Award, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 interface CertificateProps {
   title: string;
@@ -16,9 +15,9 @@ const Certificate = ({ title, issuer, date, link }: CertificateProps) => {
         <div className="p-3 bg-primary/10 rounded-full">
           <Award className="h-6 w-6 text-primary" />
         </div>
-        <a 
-          href={link} 
-          target="_blank" 
+        <a
+          href={link}
+          target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-primary transition-colors"
           aria-label="View certificate"
@@ -36,41 +35,35 @@ const Certificate = ({ title, issuer, date, link }: CertificateProps) => {
 const Certificates = () => {
   const certificates = [
     {
-      title: "Full Stack Web Development",
+      title: "Full Stack Web Developer Intern",
       issuer: "QualiZeal",
+      date: "2024",
+      link: "https://drive.google.com/file/d/1iSuLJTuEGsGyowommCwYfXl11aE6SGFs/view?usp=sharing",
+    },
+    {
+      title: "Basics of Blockchain",
+      issuer: "CourseEra",
+      date: "2021",
+      link: "https://www.coursera.org/account/accomplishments/verify/2GBV83PQFYSS",
+    },
+    {
+      title: "SQL Basic",
+      issuer: "HackerRank",
       date: "2023",
-      link: "#"
+      link: "https://www.hackerrank.com/certificates/2ff3ff7b1876",
     },
     {
-      title: "JavaScript Advanced Concepts",
-      issuer: "Udemy",
-      date: "2022",
-      link: "#"
+      title: "SQL Intermediate",
+      issuer: "HackerRank",
+      date: "2025",
+      link: "https://www.hackerrank.com/certificates/e882d097bef6",
     },
     {
-      title: "React.js Mastery",
-      issuer: "Coursera",
-      date: "2022",
-      link: "#"
+      title: "REST API Development(Intermediate)",
+      issuer: "HackerRank",
+      date: "2025",
+      link: "https://www.hackerrank.com/certificates/58bf5c22c8d1",
     },
-    {
-      title: "Node.js for Backend Development",
-      issuer: "FreeCodeCamp",
-      date: "2021",
-      link: "#"
-    },
-    {
-      title: "Database Design & Management",
-      issuer: "Udemy",
-      date: "2021",
-      link: "#"
-    },
-    {
-      title: "UI/UX Design Principles",
-      issuer: "Coursera",
-      date: "2021",
-      link: "#"
-    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -104,14 +97,14 @@ const Certificates = () => {
     <section id="certificates" className="section-container">
       <div className="max-w-5xl mx-auto">
         <h2 className="section-title text-center">Certificates</h2>
-        <p className="section-subtitle text-center">
+        <p className="text-center text-gray-500 mb-6">
           Credentials that validate my expertise and knowledge
         </p>
 
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
             {displayedCertificates.map((cert, index) => (
-              <Certificate 
+              <Certificate
                 key={index}
                 title={cert.title}
                 issuer={cert.issuer}
@@ -137,7 +130,9 @@ const Certificates = () => {
                     key={idx}
                     onClick={() => setCurrentIndex(idx)}
                     className={`h-2 rounded-full transition-all ${
-                      currentIndex === idx ? "w-6 bg-primary" : "w-2 bg-primary/30"
+                      currentIndex === idx
+                        ? "w-6 bg-primary"
+                        : "w-2 bg-primary/30"
                     }`}
                     aria-label={`Go to page ${idx + 1}`}
                   ></button>

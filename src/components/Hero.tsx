@@ -1,6 +1,5 @@
-
-import { ArrowDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { ArrowDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -17,18 +16,24 @@ const Hero = () => {
         <p className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-primary/10 text-primary rounded-full animate-fade-in">
           Full Stack Developer
         </p>
-        
+
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-delayed tracking-tight">
-          Hi, I'm{' '}
+          Hi, I'm{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
             Bamla Varun Singh
           </span>
         </h1>
-        
+
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-delayed-2">
-          A passionate full stack developer specializing in building exceptional digital experiences.
+          <blockquote className="text-lg leading-relaxed italic border-l-4 border-primary pl-4">
+            I’m not just another developer. I have a cause — to{" "}
+            <span className="font-bold">build</span>, to{" "}
+            <span className="font-bold">impact</span>, and to do it with{" "}
+            <span className="font-bold">everything I’ve got</span>.
+            <span className="font-semibold text-red-500"> — Arjun Reddy</span>
+          </blockquote>
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delayed-3">
           <a href="#contact" className="btn-primary">
             Get in Touch

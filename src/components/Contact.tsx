@@ -1,26 +1,25 @@
-
-import { useState, FormEvent } from 'react';
-import { Mail, Phone, Send, MapPin, Linkedin, Github } from 'lucide-react';
+import { useState, FormEvent } from "react";
+import { Mail, Phone, Send, MapPin, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-      setName('');
-      setEmail('');
-      setMessage('');
-      
+      setName("");
+      setEmail("");
+      setMessage("");
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitted(false);
@@ -32,15 +31,16 @@ const Contact = () => {
     <section id="contact" className="section-container bg-secondary/50">
       <div className="max-w-6xl mx-auto">
         <h2 className="section-title text-center">Get In Touch</h2>
-        <p className="section-subtitle text-center">
-          Have a project in mind or just want to connect? Feel free to reach out!
+        <p className="text-center mb-6 text-gray-500">
+          Have a project in mind or just want to connect? Feel free to reach
+          out!
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center">
           {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 animate-fade-in">
+          {/* <div className="bg-white rounded-xl shadow-sm p-6 md:p-8 animate-fade-in">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            
+
             {submitted ? (
               <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6">
                 Thank you for your message! I'll get back to you soon.
@@ -48,7 +48,10 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-muted-foreground mb-1"
+                  >
                     Your Name
                   </label>
                   <input
@@ -61,9 +64,12 @@ const Contact = () => {
                     placeholder="John Doe"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-muted-foreground mb-1"
+                  >
                     Your Email
                   </label>
                   <input
@@ -76,9 +82,12 @@ const Contact = () => {
                     placeholder="john@example.com"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-muted-foreground mb-1"
+                  >
                     Message
                   </label>
                   <textarea
@@ -91,7 +100,7 @@ const Contact = () => {
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -106,8 +115,8 @@ const Contact = () => {
                 </button>
               </form>
             )}
-          </div>
-          
+          </div> */}
+
           {/* Contact Info */}
           <div className="space-y-6 lg:mt-8">
             <div className="bg-white rounded-xl shadow-sm p-6 card-hover animate-fade-in">
@@ -117,27 +126,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <a href="mailto:contact@varunsingh.com" className="text-muted-foreground hover:text-primary">
-                    contact@varunsingh.com
+                  <a
+                    href="vaarunsingghh@gmail.com"
+                    className="text-muted-foreground hover:text-primary"
+                  >
+                    vaarunsingghh@gmail.com
                   </a>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-white rounded-xl shadow-sm p-6 card-hover animate-fade-in-delayed">
-              <div className="flex">
-                <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
-                  <a href="tel:+91xxxxxxxxxx" className="text-muted-foreground hover:text-primary">
-                    +91 XXXXX XXXXX
-                  </a>
-                </div>
-              </div>
-            </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm p-6 card-hover animate-fade-in-delayed-2">
               <div className="flex">
                 <div className="bg-primary/10 p-3 rounded-lg mr-4">
@@ -145,16 +143,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Location</h3>
-                  <p className="text-muted-foreground">India</p>
+                  <p className="text-muted-foreground">Telangana, India</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm p-6 animate-fade-in-delayed-3">
               <h3 className="font-semibold mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://linkedin.com/"
+                  href="https://www.linkedin.com/in/bamla-varun-singh-b05245259/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-primary/10 p-3 rounded-lg text-primary hover:bg-primary/20 transition-colors"
@@ -163,20 +161,13 @@ const Contact = () => {
                   <Linkedin className="h-6 w-6" />
                 </a>
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/singghh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-primary/10 p-3 rounded-lg text-primary hover:bg-primary/20 transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-6 w-6" />
-                </a>
-                <a
-                  href="mailto:contact@varunsingh.com"
-                  className="bg-primary/10 p-3 rounded-lg text-primary hover:bg-primary/20 transition-colors"
-                  aria-label="Email"
-                >
-                  <Mail className="h-6 w-6" />
                 </a>
               </div>
             </div>

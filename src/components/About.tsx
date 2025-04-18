@@ -1,22 +1,28 @@
-
-import { GraduationCap, Briefcase, Code } from 'lucide-react';
+import { GraduationCap, Briefcase, Code } from "lucide-react";
 
 const About = () => {
   return (
     <section id="about" className="section-container">
       <div className="max-w-3xl mx-auto">
         <h2 className="section-title text-center">About Me</h2>
-        <p className="section-subtitle text-center">
+        <p className="text-center mb-6 text-gray-500">
           Here's a brief introduction about my background and aspirations.
         </p>
 
         <div className="space-y-6 animate-fade-in-delayed">
           <p className="text-lg leading-relaxed">
-            I'm currently in my 3rd year pursuing a B.Tech in Computer Science and Engineering. My journey in technology is driven by a passion for creating innovative solutions through code.
+            I’m a 3rd-year B.Tech Computer Science student, but that’s just the
+            surface. At my core, I’m someone who’s{" "}
+            <span className="font-bold">obsessed with building</span> — turning
+            raw ideas into real, working products that make an impact.
           </p>
-          
+
           <p className="text-lg leading-relaxed">
-            With a strong foundation in full stack development, I enjoy the process of transforming ideas into functional applications, from designing responsive front-end interfaces to implementing robust back-end systems.
+            From designing sleek front-end interfaces to engineering robust
+            back-end systems, I don’t just code — I breathe life into digital
+            experiences. Every late night, every bug I wrestle with, every line
+            of code I write… it’s all fueled by something deeper than just
+            <span className="font-bold"> interest.</span>
           </p>
         </div>
 
@@ -31,6 +37,8 @@ const About = () => {
               <br />
               3rd Year
             </p>
+            <br />
+            <p className="">GPA: 8.88🖕</p>
           </div>
 
           <div className="bg-secondary rounded-xl p-6 card-hover animate-fade-in-delayed-2">
@@ -54,6 +62,24 @@ const About = () => {
               Full Stack Development
               <br />
               Modern Web Technologies
+            </p>
+          </div>
+          <div className="bg-secondary rounded-xl p-6 card-hover animate-fade-in-delayed-4">
+            <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4">
+              <Code className="h-6 w-6 text-primary" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Community</h3>
+            <p className="text-muted-foreground">
+              Started a developer community called <strong>Devdues</strong>,
+              <br />
+              <a
+                href="https://discord.com/invite/upq7EDUvcX" // replace with actual link
+                className="text-primary underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join us on Discord
+              </a>
             </p>
           </div>
         </div>
