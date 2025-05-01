@@ -72,6 +72,21 @@ const ProjectCard = ({
 const Projects = () => {
   const projects = [
     {
+      title: "Digital Dinner",
+      description:
+        "Built a responsive food ordering app using React, Node.js, MongoDB Atlas, and PostgreSQL.Handled dynamic menu display and order tracking by phone number. Deployed frontend on Netlify and backend on Render with cloud database integration.",
+      tags: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "Tailwind CSS",
+      ],
+      githubLink: "https://github.com/singghh/Digital-Dinner",
+      demoLink: "https://verdant-crepe-1fd420.netlify.app/",
+    },
+    {
       title: "AI-powered Jenkins Chatbot",
       description:
         "A smart chatbot integrated into Jenkins UI that helps users interact with Jenkins using natural language. Built with React, FastAPI, WebSocket, and DistilBERT for NLP, it supports job queries, build info, and more — all in real-time.",
